@@ -1,0 +1,131 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { FacebookIcon } from "lucide-react";
+
+export default function BangladishamSaotal() {
+  return (
+    <div className="font-[Noto Serif Bengali, sans-serif] text-[#2f2a26]">
+      {/* Header Navigation */}
+      <nav className="bg-[#a86b44] text-white px-6 py-4 flex justify-between items-center shadow-md">
+        <div className="text-xl font-bold">
+          <span className="block leading-tight">Bangladisham Saotal</span>
+          <span className="text-sm text-[#f0e6d2]">বাংলাদেশাম সাঁওতাল</span>
+        </div>
+        <ul className="flex space-x-6 text-sm font-medium">
+          <li><a href="#" className="hover:underline">Home</a></li>
+          <li><a href="#" className="hover:underline">About Us</a></li>
+          <li><a href="#" className="hover:underline">Blog</a></li>
+          <li><a href="#" className="hover:underline">Videos</a></li>
+          <li><a href="#" className="hover:underline">Contact</a></li>
+        </ul>
+      </nav>
+
+      {/* Hero Section */}
+      <header className="bg-[#6b341a] text-white text-center py-20 px-4">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Preserving Santal Heritage</h1>
+        <h2 className="text-lg md:text-xl mb-6">সাঁওতাল সংস্কৃতি ও ইতিহাস সংরক্ষণ</h2>
+        <p className="max-w-2xl mx-auto text-md md:text-lg mb-8">
+          Exploring and celebrating the rich cultural heritage of the Santal community in Bangladesh through stories, education, and community engagement.
+        </p>
+        <div className="flex justify-center space-x-4">
+          <Button className="bg-[#a86b44] hover:bg-[#905d36] text-white px-6 py-2 text-lg rounded">Explore Articles</Button>
+          <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#6b341a] px-6 py-2 text-lg rounded">Watch Videos</Button>
+        </div>
+      </header>
+
+      {/* Featured Section */}
+      <section className="bg-white py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-10">Featured Content</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="bg-[#c6653a] text-white rounded-xl shadow-md">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-2">🌿 Cultural Article</h3>
+                <p>Understanding traditional Santal beliefs and practices in a modern world.</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-[#476044] text-white rounded-xl shadow-md">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-2">📺 Community Video</h3>
+                <p>Watch our latest stories filmed in Santal villages of northwestern Bangladesh.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* About Us */}
+      <section className="p-10 bg-[url('/santal-texture-bg.png')] bg-cover bg-center text-white max-w-6xl mx-auto rounded-2xl shadow-inner">
+        <h2 className="text-3xl font-bold mb-4">About Us</h2>
+        <p className="text-lg leading-relaxed backdrop-blur-sm bg-black/30 p-4 rounded-xl">
+          <strong>Bangladisham Saotal</strong> is a digital platform committed to preserving and promoting the heritage, history, and cultural practices of the indigenous Santal people in Bangladesh. Through educational videos, blogs, and multilingual storytelling (Bangla & English), we aim to keep this rich culture alive for future generations.
+        </p>
+      </section>
+
+      {/* Blog Section */}
+      <section className="p-10 max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold mb-6">Blog / Articles</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Card className="bg-white shadow-md border rounded-xl hover:shadow-xl transition-shadow duration-300">
+            <CardContent className="p-6">
+              <h3 className="font-bold text-xl">📜 Santal History: From Oral to Written</h3>
+              <p className="mt-2 text-[#5c4a3c]">
+                A journey through the transformation of storytelling in the Santal community.
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="bg-white shadow-md border rounded-xl hover:shadow-xl transition-shadow duration-300">
+            <CardContent className="p-6">
+              <h3 className="font-bold text-xl">🔤 Santal Language Basics</h3>
+              <p className="mt-2 text-[#5c4a3c]">
+                Learn the Ol Chiki script and common Santali phrases in both Bangla and English.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Videos */}
+      <section className="p-10 bg-[#f6f0e8] max-w-6xl mx-auto rounded-2xl">
+        <h2 className="text-3xl font-bold mb-6">Video Gallery</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <iframe
+            className="w-full aspect-video rounded-xl border border-[#ccc] shadow-md"
+            src="https://www.facebook.com/plugins/video.php?href=YOUR_VIDEO_LINK"
+            allowFullScreen
+          ></iframe>
+          <iframe
+            className="w-full aspect-video rounded-xl border border-[#ccc] shadow-md"
+            src="https://www.facebook.com/plugins/video.php?href=YOUR_VIDEO_LINK"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="p-10 max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
+        <form className="space-y-4">
+          <Input placeholder="আপনার নাম / Your Name" className="bg-white border rounded-md" />
+          <Input type="email" placeholder="ইমেইল / Email" className="bg-white border rounded-md" />
+          <Textarea placeholder="বার্তা লিখুন / Your Message" className="bg-white border rounded-md" />
+          <Button className="bg-[#7a4f3b] hover:bg-[#5d3b2b] text-white text-lg">Send Message</Button>
+        </form>
+        <div className="mt-6 flex items-center gap-4">
+          <a href="https://facebook.com/BangladishamSaotal" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#3b5998] font-medium hover:underline">
+            <FacebookIcon className="w-5 h-5" /> Visit our Facebook Page
+          </a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-[#7a4f3b] text-white text-center py-6 mt-12">
+        <p className="text-sm">© 2025 Bangladisham Saotal. All rights reserved.</p>
+        <p className="text-xs">Designed with respect for indigenous knowledge and heritage.</p>
+      </footer>
+    </div>
+  );
+}
